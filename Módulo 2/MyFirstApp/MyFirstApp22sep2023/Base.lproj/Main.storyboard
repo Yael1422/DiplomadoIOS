@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Stack View Controller-->
+        <scene sceneID="GK0-or-EIF">
+            <objects>
+                <viewController storyboardIdentifier="ImageStackViewController" id="5TA-MR-FNf" customClass="ImageStackViewController" customModule="MyFirstApp22sep2023" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="htj-kd-ws6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b6a-6W-twf">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qVx-v8-aKN" customClass="CaptionedImage" customModule="MyFirstApp22sep2023" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="253"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oCw-jv-6B5" customClass="CaptionedImage" customModule="MyFirstApp22sep2023" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="253" width="393" height="253"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a35-1p-uoU" customClass="CaptionedImage" customModule="MyFirstApp22sep2023" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="506" width="393" height="253"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZLj-Td-h3W"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b6a-6W-twf" firstAttribute="top" secondItem="ZLj-Td-h3W" secondAttribute="top" id="N5H-yi-R85"/>
+                            <constraint firstItem="ZLj-Td-h3W" firstAttribute="bottom" secondItem="b6a-6W-twf" secondAttribute="bottom" id="Oqu-M7-ezA"/>
+                            <constraint firstItem="ZLj-Td-h3W" firstAttribute="trailing" secondItem="b6a-6W-twf" secondAttribute="trailing" id="c5B-VW-fPw"/>
+                            <constraint firstItem="b6a-6W-twf" firstAttribute="leading" secondItem="ZLj-Td-h3W" secondAttribute="leading" id="gyT-ih-clC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="0UD-rl-e21">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="paperplane.circle" catalog="system" id="o5n-nU-rKL" userLabel="Bar button Item">
+                            <connections>
+                                <action selector="segueToShare:" destination="5TA-MR-FNf" id="cg9-8p-R5Q"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="firstCaptionedImage" destination="qVx-v8-aKN" id="k0u-7c-dTd"/>
+                        <outlet property="secondCaptionedImage" destination="oCw-jv-6B5" id="Ksu-ET-zEw"/>
+                        <outlet property="thirdCaptionedImage" destination="a35-1p-uoU" id="WSR-6P-nHz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hYe-sZ-noa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2657.2519083969464" y="-10.563380281690142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jBC-Ex-iOJ">
+            <objects>
+                <viewController storyboardIdentifier="InfoViewController" id="Yi3-TL-IH1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="csq-We-GDh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="up5-7q-d53"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kXE-tH-83R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qcy-sx-6yb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2657" y="730"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paperplane.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
