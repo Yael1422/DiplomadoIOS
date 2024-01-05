@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dzp-Kn-Txu">
+                                <rect key="frame" x="0.0" y="123" width="393" height="695"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Netflix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5h-Ei-cqw">
+                                <rect key="frame" x="16" y="59" width="0.0" height="56"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Netflix-Symbol" translatesAutoresizingMaskIntoConstraints="NO" id="DRm-lI-yKu">
+                                <rect key="frame" x="36" y="52" width="321" height="70"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dzp-Kn-Txu" secondAttribute="trailing" id="1ab-GD-Efj"/>
+                            <constraint firstItem="dzp-Kn-Txu" firstAttribute="top" secondItem="n5h-Ei-cqw" secondAttribute="bottom" constant="8" id="1c9-1A-47m"/>
+                            <constraint firstItem="DRm-lI-yKu" firstAttribute="centerY" secondItem="n5h-Ei-cqw" secondAttribute="centerY" id="3fD-mg-49c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dzp-Kn-Txu" secondAttribute="bottom" id="4v1-Bf-rjy"/>
+                            <constraint firstItem="dzp-Kn-Txu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8Yw-Rb-aek"/>
+                            <constraint firstItem="n5h-Ei-cqw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BM7-O1-trz"/>
+                            <constraint firstItem="dzp-Kn-Txu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="Q5q-lw-SAe"/>
+                            <constraint firstItem="n5h-Ei-cqw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="neW-9X-64S"/>
+                            <constraint firstItem="dzp-Kn-Txu" firstAttribute="top" secondItem="DRm-lI-yKu" secondAttribute="bottom" constant="1" id="q65-7S-4jT"/>
+                            <constraint firstItem="DRm-lI-yKu" firstAttribute="leading" secondItem="n5h-Ei-cqw" secondAttribute="trailing" constant="20" id="rjv-k7-QLu"/>
+                            <constraint firstItem="DRm-lI-yKu" firstAttribute="centerX" secondItem="dzp-Kn-Txu" secondAttribute="centerX" id="sQ5-K8-1GP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="table" destination="dzp-Kn-Txu" id="hei-Cn-D6m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Netflix-Symbol" width="456" height="456"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

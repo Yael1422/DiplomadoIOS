@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="113" id="KGk-i7-Jjw" customClass="MyTableViewCell" customModule="Pokedex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="319" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="319" height="113"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="001" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adY-DL-cHL">
+                        <rect key="frame" x="16" y="0.0" width="68.666666666666671" height="113"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="41"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Name Example" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMW-PI-lRK">
+                        <rect key="frame" x="114" y="-59" width="189" height="231"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="qMW-PI-lRK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-70" id="4VP-jh-wrg"/>
+                    <constraint firstItem="qMW-PI-lRK" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="Aoz-Ad-Oga"/>
+                    <constraint firstItem="adY-DL-cHL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="N8g-KH-bmO"/>
+                    <constraint firstItem="qMW-PI-lRK" firstAttribute="top" secondItem="adY-DL-cHL" secondAttribute="top" constant="-59" id="RDT-y8-CMm"/>
+                    <constraint firstItem="qMW-PI-lRK" firstAttribute="centerY" secondItem="adY-DL-cHL" secondAttribute="centerY" id="WvP-fJ-V83"/>
+                    <constraint firstItem="qMW-PI-lRK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="maw-ZY-gIB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="nameLabel" destination="qMW-PI-lRK" id="Ran-tc-J1Y"/>
+                <outlet property="numberLabel" destination="adY-DL-cHL" id="esc-id-gBf"/>
+            </connections>
+            <point key="canvasLocation" x="138.1679389312977" y="-4.5774647887323949"/>
+        </tableViewCell>
+    </objects>
+</document>

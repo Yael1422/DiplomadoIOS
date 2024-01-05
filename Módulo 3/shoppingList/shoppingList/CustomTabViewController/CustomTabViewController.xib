@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomTabViewController" customModule="shoppingList" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="3bd-Mk-5E8" id="pub-FK-mVE"/>
+                <outlet property="textField" destination="wUA-n1-uOn" id="bp3-1P-X0J"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3bd-Mk-5E8">
+                    <rect key="frame" x="0.0" y="59" width="393" height="676"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="separatorColor" systemColor="systemOrangeColor"/>
+                    <color key="sectionIndexBackgroundColor" systemColor="systemOrangeColor"/>
+                    <color key="sectionIndexTrackingBackgroundColor" systemColor="systemOrangeColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmh-24-MQp">
+                    <rect key="frame" x="292" y="750" width="85" height="35"/>
+                    <color key="tintColor" systemColor="systemYellowColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Agregar"/>
+                    <connections>
+                        <action selector="addButton:" destination="-1" eventType="touchUpInside" id="v2V-KE-2wP"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wUA-n1-uOn">
+                    <rect key="frame" x="16" y="750" width="226" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wUA-n1-uOn" secondAttribute="bottom" constant="34" id="5tu-B8-lnh"/>
+                <constraint firstItem="3bd-Mk-5E8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8nu-yJ-giY"/>
+                <constraint firstItem="wUA-n1-uOn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Dio-T9-cyc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zmh-24-MQp" secondAttribute="trailing" constant="16" id="Faw-o9-cYR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3bd-Mk-5E8" secondAttribute="trailing" id="H3l-eo-8df"/>
+                <constraint firstItem="3bd-Mk-5E8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ICH-TX-TZq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zmh-24-MQp" secondAttribute="bottom" constant="33" id="Xjg-Zp-s11"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3bd-Mk-5E8" secondAttribute="bottom" constant="83" id="dKq-zD-HPl"/>
+                <constraint firstItem="zmh-24-MQp" firstAttribute="top" secondItem="3bd-Mk-5E8" secondAttribute="bottom" constant="15" id="gEw-ua-5Km"/>
+                <constraint firstItem="zmh-24-MQp" firstAttribute="leading" secondItem="wUA-n1-uOn" secondAttribute="trailing" constant="50" id="jSa-2x-vIS"/>
+                <constraint firstItem="wUA-n1-uOn" firstAttribute="top" secondItem="3bd-Mk-5E8" secondAttribute="bottom" constant="15" id="t4U-MV-ogU"/>
+            </constraints>
+            <point key="canvasLocation" x="119.84732824427481" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

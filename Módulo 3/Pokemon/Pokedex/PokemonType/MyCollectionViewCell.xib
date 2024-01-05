@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MyCollectionViewCell" id="gTV-IL-0wX" customClass="MyCollectionViewCell" customModule="Pokedex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tik-E8-lyX">
+                        <rect key="frame" x="25" y="10" width="150" height="150"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokemon Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJk-NX-CeP">
+                        <rect key="frame" x="44" y="168" width="113" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="RJk-NX-CeP" secondAttribute="bottom" constant="11" id="3gK-l3-Mse"/>
+                <constraint firstItem="tik-E8-lyX" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="25" id="3zN-pO-PRe"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="tik-E8-lyX" secondAttribute="trailing" constant="25" id="4ME-4n-IPa"/>
+                <constraint firstItem="RJk-NX-CeP" firstAttribute="top" secondItem="tik-E8-lyX" secondAttribute="bottom" constant="8" symbolic="YES" id="Bv9-J6-iLV"/>
+                <constraint firstItem="RJk-NX-CeP" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="44" id="Gt5-Lj-RID"/>
+                <constraint firstItem="tik-E8-lyX" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Wpv-LG-JrV"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="RJk-NX-CeP" secondAttribute="trailing" constant="43" id="wQC-2k-rGa"/>
+            </constraints>
+            <size key="customSize" width="120" height="44"/>
+            <connections>
+                <outlet property="typeImage" destination="tik-E8-lyX" id="FHn-Jm-mSM"/>
+                <outlet property="typeLabel" destination="RJk-NX-CeP" id="8iH-ZD-gqB"/>
+            </connections>
+            <point key="canvasLocation" x="183.20610687022901" y="21.83098591549296"/>
+        </collectionViewCell>
+    </objects>
+</document>
